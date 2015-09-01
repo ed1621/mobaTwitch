@@ -30,5 +30,11 @@ var app = angular.module('mobaTwitchApp', ['ui.router']);
         url: '/dota',
         templateUrl: '../views/dota.html',
         controller: 'dotaController'
+      })
+
+      .state('lol', {
+        url: '/lol',
+        templateUrl: '../views/lol.html',
+        controller: 'lolController'
       });
   });

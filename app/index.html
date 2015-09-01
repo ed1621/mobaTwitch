@@ -15,7 +15,7 @@
   <!--start header-->
   <div class="header">
     <div class="navbar navbar-default" role="navigation">
-      <div class="container">
+      <div class="container pull-left">
         <div class="navbar-header">
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
@@ -33,7 +33,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#/home">Home</a></li>
             <li><a ng-href="#/dota">Dota</a></li>
-            <li><a ng-href="#/">Contact</a></li>
+            <li><a ng-href="#/lol">LoL</a></li>
           </ul>
         </div>
       </div>
@@ -41,8 +41,10 @@
   </div>
   <!--end header-->
 
-  <div class="container">
-    <div ui-view></div>
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class= "col-lg-8" ui-view></div>
+    <div class="col-lg-2"></div>
   </div>
 
   <div class="footer">
@@ -56,6 +58,8 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/controllers-dota.js" charset="utf-8"></script>
+  <script src="scripts/controllers/controllers-lol.js" charset="utf-8"></script>
   <script src="scripts/services/services-dota.js" charset="utf-8"></script>
+  <script src="scripts/services/services-lol.js" charset="utf-8"></script>
 </body>
 </html>
