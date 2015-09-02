@@ -2,7 +2,7 @@
 <html ng-app="mobaTwitchApp">
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>mobaTwitch</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 
@@ -32,8 +32,8 @@
 
           <ul class="nav navbar-nav">
             <li class="active"><a href="#/home">Home</a></li>
-            <li><a ng-href="#/dota">Dota</a></li>
-            <li><a ng-href="#/lol">LoL</a></li>
+            <li><a ng-href="#/games">Games</a></li>
+            <li><a ng-href="#/home/lol">LoL</a></li>
           </ul>
         </div>
       </div>
@@ -41,11 +41,16 @@
   </div>
   <!--end header-->
 
+
+
+  <!--uiRouter-->
+  <div class = "sideNav"></div>
   <div class="row">
-    <div class="col-lg-2"></div>
-    <div class= "col-lg-8" ui-view></div>
-    <div class="col-lg-2"></div>
+    <div class= "thing col-lg-12" ui-view></div>
   </div>
+  <!--end uiRouter-->
+
+
 
   <div class="footer">
     <div class="container">
