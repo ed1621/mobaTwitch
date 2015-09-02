@@ -14,8 +14,8 @@ app.controller('dotaController', function($scope, dota){
       for(var i = 0; i < $scope.twitchTest.length; i++){
         var streamStatus = data.data.streams[i];
         var streamTitle = data.data.streams[i].channel.status;
-        if(streamTitle.length > 40){
-          streamTitle = streamTitle.substring(0,37)+"...";
+        if(streamTitle.length > 20){
+          streamTitle = streamTitle.substring(0,20)+"...";
         }
         $scope.streamInfo.push({
           title: streamTitle,

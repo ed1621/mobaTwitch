@@ -12,7 +12,7 @@ var app = angular.module('mobaTwitchApp', ['ui.router']);
 
   app.config(function($stateProvider, $urlRouterProvider){
 
-    $urlRouterProvider.otherwise('/error');
+    $urlRouterProvider.otherwise('/home');
 
     $stateProvider
 
