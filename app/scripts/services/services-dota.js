@@ -20,7 +20,8 @@ angular.module('mobaTwitchApp')
         title: streamTitle,
         preview: {
           small: streamStatus.preview.small,
-          medium: streamStatus.preview.medium
+          medium: streamStatus.preview.medium,
+          template: streamStatus.preview.template
         },
         viewers: streamStatus.viewers,
         url: streamStatus.channel.url,
