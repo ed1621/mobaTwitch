@@ -12,7 +12,7 @@ var app = angular.module('mobaTwitchApp', ['ui.router']);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-  $urlRouterProvider.otherwise('/home');
+  // $urlRouterProvider.otherwise('/home');
 
   $stateProvider
 
@@ -53,5 +53,12 @@ app.config(function($stateProvider, $urlRouterProvider){
     url: '/hots',
     templateUrl: '../views/streams.html',
     controller: 'lolController'
+  })
+
+  .state('stream', {
+    url: '/stream/:user',
+    templateUrl: '../views/streamPlayer.html',
+    controller: 'lolController'
+
   });
 });
