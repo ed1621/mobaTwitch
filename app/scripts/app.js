@@ -28,31 +28,32 @@ app.config(function($stateProvider, $urlRouterProvider){
 
   .state('games', {
     url: '/games',
-    templateUrl: '../views/games.html'
+    templateUrl: '../views/games.html',
   })
 
+
   .state('games.dota', {
-    url: '/dota',
+    url: '/dota-2',
     templateUrl: '../views/streams.html',
     controller: 'dotaController'
   })
 
   .state('games.lol', {
-    url: '/lol',
+    url: '/league-of-legends',
     templateUrl: '../views/streams.html',
     controller: 'lolController'
   })
 
   .state('games.hots', {
-    url: '/hots',
+    url: '/heroes-of-the-storm',
     templateUrl: '../views/streams.html',
-    controller: 'lolController'
+    controller: 'hotsController'
   })
 
-  .state('games.hon', {
-    url: '/hots',
+  .state('games.cs', {
+    url: '/counter-strike',
     templateUrl: '../views/streams.html',
-    controller: 'lolController'
+    controller: 'csController'
   })
 
   .state('stream', {

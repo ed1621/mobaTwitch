@@ -1,13 +1,11 @@
-<div class="jumbotron text-center" id="streams">
-
-</div>
-
-
-
-
-
-<a ui-sref=".lol">lol</a>
-<a ui-sref=".dota">dota</a>
-
 <div class="col-sm-1"></div>
-<div class="col-sm-9" ui-view></div>
+<div class="col-sm-9" ui-view>
+  <div class="directory"3 id = "top">
+    <a ui-sref=".lol"><img class="image "src="../images/lol.jpg"/></a>
+    <a ui-sref=".dota"><img class="image "src="../images/dota.jpg"/></a>
+  </div>
+  <div class="directory" id = "bot">
+    <a ui-sref=".hots"><img class="image "src="../images/hots.jpg"/></a>
+    <a ui-sref=".cs" ui-sref-opts ="{reload: true}"><img class="image "src="../images/cs.jpg"/></a>
+  </div>
+</div>
