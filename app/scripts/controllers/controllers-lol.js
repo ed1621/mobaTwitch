@@ -17,13 +17,13 @@ app.controller('lolController', function($scope, $sce, lol){
     });
   };
 
+    $scope.matches = lol.getTournaments();
 
   $scope.user = function(user){
     $scope.detailFrame= "https://twitch.tv/"+ user +"/embed";
     console.log($scope.detailFrame);
     return $scope.detailFrame;
   };
-
 
   $scope.test = function(){
     console.log($scope.detailFrame);

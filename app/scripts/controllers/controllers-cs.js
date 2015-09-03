@@ -9,4 +9,6 @@ app.controller('csController', function($scope, cs){
       $scope.streamInfo = cs.streamData(twitchTest);
     });
   };
+
+    $scope.matches = cs.getTournaments();
 });

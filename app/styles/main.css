@@ -71,7 +71,6 @@ body {
 #bot{
   margin-bottom: 75px;
 }
-
 /* Side Navigation */
 
 
@@ -83,6 +82,7 @@ body {
     background-color: #222;
     width: 10.2%;
     height: 100vh;
+    z-index: 100000000000;
   }
 }
 

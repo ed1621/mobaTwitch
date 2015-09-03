@@ -2,7 +2,7 @@
 
 angular.module('mobaTwitchApp')
 
-.service('cs', function($http){
+.service('cs', function($http, $firebaseArray, fb){
   this.getGame = function(){
     var url = 'https://api.twitch.tv/kraken/streams?game=counter-strike:+global+offensive&limit=75&offset=0&callback=JSON_CALLBACK';
     return  $http.jsonp(url);
@@ -28,5 +28,10 @@ angular.module('mobaTwitchApp')
       });
     }
     return streamInfo;
+  };
+
+  this.getTournaments = function(){
+    var ref = new Firebase(fb.url + '/cs');
+    return $firebaseArray(ref);
   };
 });

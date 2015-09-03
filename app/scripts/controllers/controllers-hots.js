@@ -9,4 +9,6 @@ app.controller('hotsController', function($scope, hots){
       $scope.streamInfo = hots.streamData(twitchTest);
     });
   };
+
+    $scope.matches = hots.getTournaments();
 });

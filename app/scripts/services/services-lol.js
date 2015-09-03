@@ -2,7 +2,7 @@
 
 angular.module('mobaTwitchApp')
 
-.service('lol', function($http){
+.service('lol', function($http, $firebaseArray, fb){
   this.getGame = function(){
     var url = 'https://api.twitch.tv/kraken/streams?game=League+of+Legends&limit=30&offset=0&callback=JSON_CALLBACK';
     return  $http.jsonp(url);
@@ -28,5 +28,10 @@ angular.module('mobaTwitchApp')
       });
     }
     return streamInfo;
+  };
+
+  this.getTournaments = function(){
+    var ref = new Firebase(fb.url + '/lol');
+    return $firebaseArray(ref);
   };
 });

@@ -9,4 +9,7 @@ app.controller('dotaController', function($scope, dota){
       $scope.streamInfo = dota.streamData(twitchTest);
     });
   };
+  
+  $scope.matches = dota.getTournaments();
+
 });

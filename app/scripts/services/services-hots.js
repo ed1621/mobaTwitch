@@ -2,7 +2,7 @@
 
 angular.module('mobaTwitchApp')
 
-.service('hots', function($http){
+.service('hots', function($http, $firebaseArray, fb){
   this.getGame = function(){
     var url = 'https://api.twitch.tv/kraken/streams?game=heroes+of+the+storm&limit=30&offset=0&callback=JSON_CALLBACK';
     return  $http.jsonp(url);
@@ -28,5 +28,10 @@ angular.module('mobaTwitchApp')
       });
     }
     return streamInfo;
+  };
+
+  this.getTournaments = function(){
+    var ref = new Firebase(fb.url + '/hots');
+    return $firebaseArray(ref);
   };
 });

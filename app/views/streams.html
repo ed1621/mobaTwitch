@@ -1,3 +1,10 @@
+<div class = "sideNav">
+  <div class = "tournaments" ng-repeat='fights in matches'>
+      {{fights.teams}} on {{fights.date}} at {{fights.time}}
+  </div>
+
+</div>
+
 <div class="row" id="streams">
   <div class="" ng-init = "getGame()">
     <span class = "col-sm-6" id = "streams"  ng-repeat = 'info in streamInfo'>

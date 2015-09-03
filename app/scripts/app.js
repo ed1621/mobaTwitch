@@ -8,11 +8,15 @@
 *
 * Main module of the application.
 */
-var app = angular.module('mobaTwitchApp', ['ui.router']);
+var app = angular.module('mobaTwitchApp', ['ui.router', 'firebase']);
+
+app.constant('fb', {
+  url: 'https://mobatwitch.firebaseio.com'
+});
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-  // $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
 
