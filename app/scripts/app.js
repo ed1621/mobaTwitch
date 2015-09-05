@@ -22,7 +22,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
   .state('home', {
     url: '/home',
-    templateUrl: '../views/main.html'
+    templateUrl: '../views/main.html',
   })
 
   .state('error', {

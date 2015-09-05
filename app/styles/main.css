@@ -27,9 +27,32 @@ body {
     padding-bottom: 19px;
   }
 }
+.login{
+  margin: 150px;
+}
+.logout{
+  margin-left: 170vh;
+  margin-top: -50px;
+}
 
 #streams{
   margin-top: 50px;
+}
+.touneyInfo{
+  margin: 75px 50px 0px 50px;
+}
+.tournContainer{
+  display: block;
+}
+.streamButton{
+  margin: 10px 15px 0px 12px;
+}
+.tournaments{
+  margin-top: 25px;
+  color: #fff;
+}
+.hr{
+  border-color: #666;
 }
 
 .stuff{
@@ -80,9 +103,8 @@ body {
     position:fixed;
     right: 0;
     background-color: #222;
-    width: 10.2%;
+    width: 20%;
     height: 100vh;
-    z-index: 100000000000;
   }
 }
 

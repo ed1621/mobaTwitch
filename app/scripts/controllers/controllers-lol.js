@@ -10,14 +10,13 @@ app.filter('trustAsResourceUrl', ['$sce', function($sce) {
 
 app.controller('lolController', function($scope, apiService){
   $scope.getGame = function(){
-    $scope.streamInfo = [];
     apiService.getGame('League+of+Legends').then(function(data){
       var twitchTest = data.data.streams;
       $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
 
-    $scope.matches = apiService.getTournaments();
+    $scope.matches = apiService.getTournaments('lol');
 
   $scope.user = function(user){
     $scope.detailFrame= "https://twitch.tv/"+ user +"/embed";

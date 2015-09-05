@@ -11,5 +11,5 @@ app.controller('hotsController', function($scope, apiService){
     });
   };
 
-    $scope.matches = apiService.getTournaments();
+    $scope.matches = apiService.getTournaments('hots');
 });

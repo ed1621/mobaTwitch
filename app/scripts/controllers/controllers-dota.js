@@ -11,5 +11,5 @@ app.controller('dotaController', function($scope, apiService){
     });
   };
 
-    $scope.matches = apiService.getTournaments();
+    $scope.matches = apiService.getTournaments('dota2/tournaments');
 });

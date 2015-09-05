@@ -31,9 +31,8 @@ angular.module('mobaTwitchApp')
     return streamInfo;
   };
 
-  this.getTournaments = function(){
-    var ref = new Firebase(fb.url + '/dota2/tournaments');
+  this.getTournaments = function(game){
+    var ref = new Firebase(fb.url + '/' + game);
     return $firebaseArray(ref);
   };
-
 });

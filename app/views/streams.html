@@ -1,9 +1,19 @@
 <div class = "sideNav">
-  <div class = "tournaments" ng-repeat='fights in matches'>
-      {{fights.teams}} on {{fights.date}} at {{fights.time}}
-  </div>
+  <form class="touneyInfo" action="index.html" method="post">
+    <input type="text" name="name" ng-model = "teams" placeholder="Team vs Team">
+    <input type="text" name="name" ng-model = "times" placeholder="Time">
+    <input type="text" name="name" ng-model = "date" placeholder="MM/DD/YY">
+    <button type="button" class = "btn btn-danger streamButton" ng-click = "addThread()">Add Tournament</button>
+  </form>
+  
+  <div class="tournContainer">
+    <div class = "tournaments" ng-repeat='fights in matches'>
+        {{fights.teams}} on {{fights.date}} at {{fights.time}}
+        <hr class = "hr">
+    </div><!--end tournaments-->
+  </div><!--end tournContainer-->
+</div><!--end sidenav-->
 
-</div>
 
 <div class="row" id="streams">
   <div class="" ng-init = "getGame()">
