@@ -2,13 +2,14 @@
 
 var app = angular.module('mobaTwitchApp');
 
-app.controller('hotsController', function($scope, hots){
+app.controller('hotsController', function($scope, apiService){
   $scope.getGame = function(){
-    hots.getGame().then(function(data){
+    $scope.streamInfo = [];
+    apiService.getGame('heroes+of+the+storm').then(function(data){
       var twitchTest = data.data.streams;
-      $scope.streamInfo = hots.streamData(twitchTest);
+      $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
 
-    $scope.matches = hots.getTournaments();
+    $scope.matches = apiService.getTournaments();
 });

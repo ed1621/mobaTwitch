@@ -2,13 +2,14 @@
 
 var app = angular.module('mobaTwitchApp');
 
-app.controller('csController', function($scope, cs){
+app.controller('csController', function($scope, apiService){
   $scope.getGame = function(){
-    cs.getGame().then(function(data){
+    $scope.streamInfo = [];
+    apiService.getGame('counter-strike:+global+offensive').then(function(data){
       var twitchTest = data.data.streams;
-      $scope.streamInfo = cs.streamData(twitchTest);
+      $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
 
-    $scope.matches = cs.getTournaments();
+    $scope.matches = apiService.getTournaments();
 });

@@ -2,14 +2,14 @@
 
 var app = angular.module('mobaTwitchApp');
 
-app.controller('dotaController', function($scope, dota){
+app.controller('dotaController', function($scope, apiService){
   $scope.getGame = function(){
-    dota.getGame().then(function(data){
+    $scope.streamInfo = [];
+    apiService.getGame('Dota+2').then(function(data){
       var twitchTest = data.data.streams;
-      $scope.streamInfo = dota.streamData(twitchTest);
+      $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
-  
-  $scope.matches = dota.getTournaments();
 
+    $scope.matches = apiService.getTournaments();
 });

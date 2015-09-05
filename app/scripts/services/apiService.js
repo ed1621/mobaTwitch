@@ -2,9 +2,9 @@
 
 angular.module('mobaTwitchApp')
 
-.service('hots', function($http, $firebaseArray, fb){
-  this.getGame = function(){
-    var url = 'https://api.twitch.tv/kraken/streams?game=heroes+of+the+storm&limit=30&offset=0&callback=JSON_CALLBACK';
+.service('apiService', function($http, $firebaseArray, fb){
+  this.getGame = function(game){
+    var url = 'https://api.twitch.tv/kraken/streams?game='+ game +'&limit=30&offset=0&callback=JSON_CALLBACK';
     return  $http.jsonp(url);
   };
 
@@ -20,7 +20,8 @@ angular.module('mobaTwitchApp')
         title: streamTitle,
         preview: {
           small: streamStatus.preview.small,
-          medium: streamStatus.preview.medium
+          medium: streamStatus.preview.medium,
+          template: streamStatus.preview.template
         },
         viewers: streamStatus.viewers,
         url: streamStatus.channel.url,
@@ -31,7 +32,8 @@ angular.module('mobaTwitchApp')
   };
 
   this.getTournaments = function(){
-    var ref = new Firebase(fb.url + '/hots');
+    var ref = new Firebase(fb.url + '/dota2/tournaments');
     return $firebaseArray(ref);
   };
+
 });

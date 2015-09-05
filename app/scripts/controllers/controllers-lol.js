@@ -8,16 +8,16 @@ app.filter('trustAsResourceUrl', ['$sce', function($sce) {
     };
 }]);
 
-app.controller('lolController', function($scope, $sce, lol){
+app.controller('lolController', function($scope, apiService){
   $scope.getGame = function(){
     $scope.streamInfo = [];
-    lol.getGame().then(function(data){
+    apiService.getGame('League+of+Legends').then(function(data){
       var twitchTest = data.data.streams;
-      $scope.streamInfo = lol.streamData(twitchTest);
+      $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
 
-    $scope.matches = lol.getTournaments();
+    $scope.matches = apiService.getTournaments();
 
   $scope.user = function(user){
     $scope.detailFrame= "https://twitch.tv/"+ user +"/embed";
