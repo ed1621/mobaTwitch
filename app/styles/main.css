@@ -29,9 +29,21 @@ body {
 }
 .steam{
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 75px;
+  align-content: space-between;
+
+}
+.player{
+  height: 38em;
+  width: 64em;
+  margin-right: 17em;
+}
+.chat{
+  height: 44em;
+  width: 30em;
+  margin-top: -2em;
+  float: right;
 }
 .login{
   margin: 150px;
