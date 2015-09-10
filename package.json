@@ -38,3 +38,19 @@
     "test": "grunt test"
   }
 }
+
+{
+  "name": "MLGTwitch",
+  "longname": "MLGTwitch",
+  "namespace": "MLGTwitch",
+  "version": "1.0",
+  "description": "Twitch but for MLG games",
+  "author": "ed",
+  "sources": {
+    "directory":"."
+  },
+  "icon": { "windows":["arrow-204-24.ico"] },
+  "main": "main.js",
+  "license": "MIT",
+  "copyright": "2014 Ed"
+}

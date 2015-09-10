@@ -8,6 +8,13 @@
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/main.css">
+  <script>
+    window.addEventListener('message', function(message) {
+        var versions = JSON.parse(message.data);
+        document.getElementById('node-version').innerText = versions['node'];
+        document.getElementById('tint-version').innerText = versions['tint'];
+    });
+    </script>
   <!-- endbuild -->
 </head>
 <body ng-controller = 'mainPageController'>
