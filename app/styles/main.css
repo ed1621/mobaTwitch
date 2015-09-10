@@ -37,7 +37,7 @@ body {
   margin: 150px;
 }
 .logout{
-  margin-left: 170vh;
+  margin-left: 81em;
   margin-top: -50px;
 }
 
@@ -85,8 +85,8 @@ body {
 }
 
 .image{
-  height: 33vh;
-  width: 25vw;
+  height: 22em;
+  width: 25em;
 }
 
 .directory{

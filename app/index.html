@@ -8,13 +8,7 @@
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/main.css">
-  <script>
-    window.addEventListener('message', function(message) {
-        var versions = JSON.parse(message.data);
-        document.getElementById('node-version').innerText = versions['node'];
-        document.getElementById('tint-version').innerText = versions['tint'];
-    });
-    </script>
+
   <!-- endbuild -->
 </head>
 <body ng-controller = 'mainPageController'>
@@ -50,12 +44,11 @@
   <!--end header-->
 
 
-
-  <!--uiRouter-->
+  <!-- uiRouter-->
   <div class="row">
     <div class= "thing col-lg-12" ui-view></div>
   </div>
-  <!--end uiRouter-->
+  <!--end uiRouter -->
 
 
 
@@ -65,7 +58,13 @@
     </div>
   </div>
 
-
+  <script>
+    window.addEventListener('message', function(message) {
+        var versions = JSON.parse(message.data);
+        document.getElementById('node-version').innerText = versions['node'];
+        document.getElementById('tint-version').innerText = versions['tint'];
+    });
+  </script>
   <script src="bower_components/angular/angular.js" charset="utf-8"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js" charset="utf-8"></script>
   <script src="bower_components/firebase/firebase.js" charset="utf-8"></script>
