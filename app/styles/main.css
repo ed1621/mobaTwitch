@@ -131,6 +131,10 @@ body {
   .logout{
     margin-left: 83em;
   }
+  .image {
+    height: 20em;
+    width: 31em;
+}
 }
 
 @media(min-width:768px) {
