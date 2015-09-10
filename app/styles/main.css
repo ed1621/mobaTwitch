@@ -37,13 +37,15 @@ body {
 .player{
   height: 38em;
   width: 64em;
-  margin-right: 17em;
+  margin-right: 20em;
+  margin-left: 5em;
+  margin-top: 5em;
 }
 .chat{
-  height: 44em;
+  height: 56em;
   width: 30em;
   margin-top: -2em;
-  float: right;
+  margin-right: 1em
 }
 .login{
   margin: 150px;
