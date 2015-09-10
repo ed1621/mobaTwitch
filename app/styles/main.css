@@ -114,6 +114,18 @@ body {
 }
 /* Side Navigation */
 
+@media(max-width:1280px){
+  .player{
+    height: 32em;
+    width: 63em;
+    margin-right: 2em;
+  }
+  .chat{
+    height: 39em;
+    width: 23em;
+    margin-top: -2em;
+  }
+}
 
 @media(min-width:768px) {
   .sideNav{
