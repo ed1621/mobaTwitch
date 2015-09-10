@@ -2,30 +2,17 @@
 
 var app = angular.module('mobaTwitchApp');
 
-app.filter('trustAsResourceUrl', ['$sce', function($sce) {
-    return function(val) {
-        return $sce.trustAsResourceUrl(val);
-    };
-}]);
+app.controller('lolController', function($scope, $sce, apiService){
+  $scope.username = 'ljhabsdv';
 
-app.controller('lolController', function($scope, apiService){
   $scope.getGame = function(){
+
+    //getting object from service
     apiService.getGame('League+of+Legends').then(function(data){
       var twitchTest = data.data.streams;
       $scope.streamInfo = apiService.streamData(twitchTest);
     });
   };
-
+    //getting info from firebase for tournament sidebar
     $scope.matches = apiService.getTournaments('lol');
-
-  $scope.user = function(user){
-    $scope.detailFrame= "https://twitch.tv/"+ user +"/embed";
-    console.log($scope.detailFrame);
-    return $scope.detailFrame;
-  };
-
-  $scope.test = function(){
-    console.log($scope.detailFrame);
-  };
-
 });

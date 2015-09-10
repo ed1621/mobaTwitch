@@ -8,7 +8,7 @@
 *
 * Main module of the application.
 */
-var app = angular.module('mobaTwitchApp', ['ui.router', 'firebase']);
+var app = angular.module('mobaTwitchApp', ['ui.router', 'firebase', 'angularjs.media.directives']);
 
 app.constant('fb', {
   url: 'https://mobatwitch.firebaseio.com'
@@ -63,7 +63,9 @@ app.config(function($stateProvider, $urlRouterProvider){
   .state('stream', {
     url: '/stream/:user',
     templateUrl: '../views/streamPlayer.html',
-    controller: 'lolController'
-
+    controller: function($stateParams, $scope){
+      $scope.username = $stateParams.user;
+    }
   });
+  
 });

@@ -31,6 +31,7 @@ angular.module('mobaTwitchApp')
     return streamInfo;
   };
 
+
   this.getTournaments = function(game){
     var ref = new Firebase(fb.url + '/' + game);
     return $firebaseArray(ref);

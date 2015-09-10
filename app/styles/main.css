@@ -27,6 +27,12 @@ body {
     padding-bottom: 19px;
   }
 }
+.steam{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 75px;
+}
 .login{
   margin: 150px;
 }
