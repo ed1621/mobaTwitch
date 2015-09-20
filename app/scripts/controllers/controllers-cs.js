@@ -31,8 +31,8 @@ app.controller('csController', function($scope, apiService){
 
         $scope.matches.$add(newThread);
 
-        // $scope.teams = ''; //Clear the text in the input box
-        // $scope.times = ''; //Same
-        // $scope.date = ''; //ditto
+        $scope.teams = ''; //Clear the text in the input box
+        $scope.times = ''; //Same
+        $scope.date = ''; //ditto
     };
 });
