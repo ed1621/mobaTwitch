@@ -20,7 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
   $stateProvider
 
-  .state('butts', {
+  .state('home', {
     url: '/home',
     templateUrl: '../views/main.html',
   })
